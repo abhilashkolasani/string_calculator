@@ -21,14 +21,20 @@ public class Main {
         int resultWithDefaultDelimiter = stringCalculator.add("//;\n1;2;3;4");
         System.out.println("resultWithDefaultDelimiter: " + resultWithDefaultDelimiter);
 
-        int resultWithNegativeNumbers = stringCalculator.add("//;\n1;-2;3;-4");
-        System.out.println("resultWithNegativeNumbers: " + resultWithNegativeNumbers);
-
         int resultWithNumbersGreaterThan1000 = stringCalculator.add("//;\n1;2;3000;4");
         System.out.println("resultWithNumbersGreaterThan1000: " + resultWithNumbersGreaterThan1000);
 
         int resultWithVariableLengthDelimiter = stringCalculator.add("//[***]\n1***2***3");
         System.out.println("resultWithVariableLengthDelimiter: " + resultWithVariableLengthDelimiter);
+
+        int resultWithMultipleDelimiters = stringCalculator.add("//[*][%]\n5*5%2");
+        System.out.println("resultWithMultipleDelimiters: " + resultWithMultipleDelimiters);
+
+        int resultWithMultipleDelimitersWithVariableLength = stringCalculator.add("//[***][..][%%]\n5%%5***4%2..3.1");
+        System.out.println("resultWithMultipleDelimitersWithVariableLength: " + resultWithMultipleDelimitersWithVariableLength);
+
+        int resultWithNegativeNumbers = stringCalculator.add("//;\n1;-2;3;-4");
+        System.out.println("resultWithNegativeNumbers: " + resultWithNegativeNumbers);
 
     }
 }
