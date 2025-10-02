@@ -27,5 +27,8 @@ public class Main {
         int resultWithNumbersGreaterThan1000 = stringCalculator.add("//;\n1;2;3000;4");
         System.out.println("resultWithNumbersGreaterThan1000: " + resultWithNumbersGreaterThan1000);
 
+        int resultWithVariableLengthDelimiter = stringCalculator.add("//[***]\n1***2***3");
+        System.out.println("resultWithVariableLengthDelimiter: " + resultWithVariableLengthDelimiter);
+
     }
 }
