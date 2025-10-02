@@ -51,4 +51,9 @@ class StringCalculatorTest {
     void testAddWithNumbersGreaterThan1000() {
         assertEquals(8, stringCalculator.add("//,\n1,1001,3,4"));
     }
+
+    @Test
+    void testAddWithVariableLengthDelimiter() {
+        assertEquals(6, stringCalculator.add("//[***]\n1***2***3"));
+    }
 }

@@ -12,19 +12,25 @@ public class StringCalculator {
         }
 
         int indexOfNewLine = numbers.indexOf("\n");
-        String delimiter = numbers.startsWith("//") ? numbers.substring(2, indexOfNewLine) : "[,\n]";
-        String[] numbersArray = numbers.substring(indexOfNewLine + 1).split(delimiter);
+        String[] numbersArray;
+        if (numbers.startsWith("//")) {
+            String delimiter = numbers.substring(2, indexOfNewLine);
+            numbersArray = numbers.substring(indexOfNewLine + 1).split(delimiter);
+        } else {
+            String delimiter = "[,\\n]";
+            numbersArray = numbers.split(delimiter);
+        }
 
         int sum = 0;
         ArrayList<Integer> negativeNumbers = new ArrayList<>();
         for (String number : numbersArray) {
-            int value = Integer.parseInt(number);
+            int value = number.isBlank() ? 0 : Integer.parseInt(number);
             if (value < 0) {
-                negativeNumbers.add(Integer.parseInt(number));
+                negativeNumbers.add(value);
                 continue;
             }
             if (value < 1000) {
-                sum += Integer.parseInt(number);
+                sum += value;
             }
         }
 
