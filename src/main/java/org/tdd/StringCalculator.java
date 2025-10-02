@@ -18,13 +18,14 @@ public class StringCalculator {
         int sum = 0;
         ArrayList<Integer> negativeNumbers = new ArrayList<>();
         for (String number : numbersArray) {
-            if (Integer.parseInt(number) < 0) {
+            int value = Integer.parseInt(number);
+            if (value < 0) {
                 negativeNumbers.add(Integer.parseInt(number));
                 continue;
             }
-
-            sum += Integer.parseInt(number);
-
+            if (value < 1000) {
+                sum += Integer.parseInt(number);
+            }
         }
 
         if (!negativeNumbers.isEmpty()) {

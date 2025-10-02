@@ -24,5 +24,8 @@ public class Main {
         int resultWithNegativeNumbers = stringCalculator.add("//;\n1;-2;3;-4");
         System.out.println("resultWithNegativeNumbers: " + resultWithNegativeNumbers);
 
+        int resultWithNumbersGreaterThan1000 = stringCalculator.add("//;\n1;2;3000;4");
+        System.out.println("resultWithNumbersGreaterThan1000: " + resultWithNumbersGreaterThan1000);
+
     }
 }
