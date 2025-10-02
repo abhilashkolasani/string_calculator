@@ -56,4 +56,19 @@ class StringCalculatorTest {
     void testAddWithVariableLengthDelimiter() {
         assertEquals(6, stringCalculator.add("//[***]\n1***2***3"));
     }
+
+    @Test
+    void testAddWithMultipleDelimiters() {
+        assertEquals(12, stringCalculator.add("//[*][%]\n5*5%2"));
+    }
+
+    @Test
+    void testAddWithMultipleDelimitersWithVariableLength() {
+        assertEquals(14, stringCalculator.add("//[***][%%]\n5%%5***4"));
+    }
+
+    @Test
+    void testAddWithMultipleDelimitersWithVariableLength1() {
+        assertEquals(20, stringCalculator.add("//[***][..][%%]\n5%%5***4%2..3.1"));
+    }
 }
