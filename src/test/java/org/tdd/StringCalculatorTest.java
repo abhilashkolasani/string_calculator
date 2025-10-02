@@ -41,4 +41,9 @@ class StringCalculatorTest {
     void testAddWithDefaultDelimiter() {
         assertEquals(10, stringCalculator.add("//;\n1;2;3;4"));
     }
+
+    @Test
+    void testAddWithNegativeNumber() {
+        assertThrows(IllegalArgumentException.class, () -> stringCalculator.add("-1,2"));
+    }
 }
