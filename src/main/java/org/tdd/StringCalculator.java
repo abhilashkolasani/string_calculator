@@ -15,8 +15,7 @@ public class StringCalculator {
         String[] numbersArray;
         if (numbers.startsWith("//")) {
             String delimiter = numbers.substring(2, indexOfNewLine);
-            delimiter = delimiter
-                    .transform(str -> str.replace("][", ""));
+            delimiter = delimiter.replace("][", "");
             numbersArray = numbers.substring(indexOfNewLine + 1).split(delimiter);
         } else {
             String delimiter = "[,\\n]";
