@@ -9,11 +9,15 @@ public class StringCalculator {
             return Integer.parseInt(numbers);
         }
 
-        String[] numbersArray = numbers.split("[,\n]");
+        int indexOfNewLine = numbers.indexOf("\n");
+        String delimiter = numbers.startsWith("//") ? numbers.substring(2, indexOfNewLine) : "[,\n]";
+        String[] numbersArray = numbers.substring(indexOfNewLine + 1).split(delimiter);
+
         int sum = 0;
         for (String number : numbersArray) {
             sum += Integer.parseInt(number);
         }
         return sum;
     }
+
 }
