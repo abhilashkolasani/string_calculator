@@ -11,9 +11,9 @@ public class Main {
 
         System.out.println("resultWithNull: " + resultWithNull);
         System.out.println("resultWithEmptyString: " + resultWithEmptyString);
-        System.out.println("resultWithEmptyString: " + resultWithSpaceString);
-        System.out.println("resultWithEmptyString: " + resultWithOneNumber);
-        System.out.println("resultWithEmptyString: " + resultWithTwoNumbers);
+        System.out.println("resultWithSpaceString: " + resultWithSpaceString);
+        System.out.println("resultWithOneNumber: " + resultWithOneNumber);
+        System.out.println("resultWithTwoNumbers: " + resultWithTwoNumbers);
 
     }
 }
